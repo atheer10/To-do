@@ -1,0 +1,296 @@
+@font-face {
+  font-family: "Dubai-Medium";
+  src: url("DubaiW23-Medium.eot");
+  src: url("DubaiW23-Medium.eot?#iefix") format("embedded-opentype"),
+    url("DubaiW23-Medium.woff2") format("woff2"),
+    url("DubaiW23-Medium.woff") format("woff"),
+    url("DubaiW23-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Dubai-Regular";
+  src: url("DubaiW23-Regular.eot");
+  src: url("DubaiW23-Regular.eot?#iefix") format("embedded-opentype"),
+    url("DubaiW23-Regular.woff2") format("woff2"),
+    url("DubaiW23-Regular.woff") format("woff"),
+    url("DubaiW23-Regular.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  background-color: #f9f9f9f9;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  /* flex-wrap: wrap; */
+  flex-direction: row-reverse;
+}
+.tasklist-box {
+  border-radius: 1px;
+  padding: 8px;
+}
+
+.top-header,
+.tasklist-box {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox {
+  display: inline-block;
+  float: right;
+  margin: 8px;
+  border: 2px solid #eef4fc;
+
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  border-radius: 100px;
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+}
+
+.task:hover .checkbox,
+[type="checkbox"]:focus + label .checkbox {
+  transform: scale(1.2);
+  border-color: #4a90e2;
+}
+
+/* [type="checkbox"]:checked + label .checkbox {
+  background-color: aqua;
+} */
+
+div.task {
+  padding: 10px;
+  font-family: Dubai-Regular;
+  font-size: 18px;
+  color: #666666;
+}
+.tasklist-title {
+  font-family: Dubai-Medium;
+  font-size: 20px;
+  color: #30394a;
+}
+
+.tasklist-header {
+  padding-bottom: 8px;
+}
+.page {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.top-header,
+.logo-header {
+  height: 64px;
+}
+.elements {
+  padding: 8px;
+}
+
+.container .menu {
+  height: auto;
+  position: relative;
+  min-width: 200px;
+
+  background: #273648;
+  text-align: right;
+}
+
+.container .menu li {
+  padding: 0 8px;
+  line-height: 48px;
+  font-family: "Dubai-Medium";
+  font-size: 18px;
+  color: #edf4fc;
+}
+
+li:active {
+  background-color: #4a90e2;
+}
+li:hover {
+  background-color: #4a90e2;
+}
+
+/* #icon-list {
+  width: 18px;
+  height: 15px;
+} */
+.icons {
+  padding-left: 8px;
+}
+#logo {
+  padding: 4px;
+  display: block;
+  margin-left: auto;
+  margin-right: 10%;
+}
+
+#close {
+  display: block;
+  padding-left: 8px;
+  padding-top: 8px;
+}
+
+#avatar {
+  right: 16px;
+  height: 48px;
+  order: 1;
+  position: relative;
+  top: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+input {
+  text-align: right;
+}
+.btn {
+  display: inline-block;
+  min-width: 128px;
+}
+.btn,
+.options {
+  width: 160px;
+}
+
+.search {
+  width: 256px;
+}
+.search,
+.btn {
+  font-family: "Dubai-Regular";
+  color: #565656;
+  font-size: 18px;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  height: 48px;
+}
+
+.options {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 128px;
+  /* padding: 12px 16px; */
+  z-index: 1;
+}
+
+.dropdown:hover .options {
+  display: block;
+}
+
+.chip {
+  position: relative;
+  float: left;
+  font-family: Dubai-Regular;
+  display: inline-block;
+  font-size: 13px;
+  padding: 5px;
+  border-radius: 100px;
+  background-color: #e0e0e0;
+  text-align: center;
+}
+
+.tasklist {
+  margin-top: 34px;
+  padding: 0 16px;
+  text-align: right;
+}
+
+.checkbox {
+  padding-right: 8px;
+  border-radius: 100%;
+}
+
+.line {
+  position: fixed;
+  min-width: 200px;
+  background-color: #3d4a5a;
+  height: 2px;
+}
+.user-info {
+  position: fixed;
+  bottom: 0.8%;
+  display: flex;
+  border-top: 2px solid #3d4a5a;
+  width: 200px;
+  height: 80px;
+}
+
+.user-role {
+  flex: 1;
+  position: relative;
+  right: 28px;
+  top: 28px;
+}
+
+#username {
+  font-size: 14px;
+  color: #edf4fc;
+}
+
+#company {
+  font-size: 11px;
+  color: rgba(237, 244, 252, 0.5);
+}
+
+#company,
+#username {
+  font-family: "Dubai-Medium";
+}
+
+#user-arrow {
+  top: 40px;
+  left: 16px;
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+
+.footer {
+  height: 40px;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+/* .active {
+  background-color: aqua;
+} */
+
+#menu-on {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+}
+
+#arrow-down {
+  right: 16px;
+  position: relative;
+  top: 2px;
+}
+#user-arrow {
+  width: 16px;
+  height: 16px;
+}
