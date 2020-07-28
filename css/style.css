@@ -48,7 +48,7 @@ body {
   position: absolute;
 }
 
-.checkbox {
+.check {
   display: inline-block;
   float: right;
   margin: 8px;
@@ -62,15 +62,11 @@ body {
   transition: transform 300ms ease-in-out;
 }
 
-.task:hover .checkbox,
-[type="checkbox"]:focus + label .checkbox {
+.task:hover .check,
+[type="checkbox"]:focus + label .check {
   transform: scale(1.2);
   border-color: #4a90e2;
 }
-
-/* [type="checkbox"]:checked + label .checkbox {
-  background-color: aqua;
-} */
 
 div.task {
   padding: 10px;
@@ -215,7 +211,7 @@ input {
   text-align: right;
 }
 
-.checkbox {
+.check {
   padding-right: 8px;
   border-radius: 100%;
 }
